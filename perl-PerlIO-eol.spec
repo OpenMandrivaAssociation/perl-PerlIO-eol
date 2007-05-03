@@ -1,12 +1,12 @@
 %define name perl-PerlIO-eol
 %define real_name PerlIO-eol
-%define version 0.13
-%define release %mkrel 4
+%define version 0.14
+%define rel     1
 
 Summary:	PerlIO layer for normalizing line endings
 Name:		%{name}
 Version:	%{version}
-Release:	%{release}
+Release:	%mkrel %{rel}
 License:	GPL or Artistic
 Group:		Development/Perl
 Source:         http://search.cpan.org/CPAN/authors/id/A/AU/AUTRIJUS/%{real_name}-%{version}.tar.bz2
