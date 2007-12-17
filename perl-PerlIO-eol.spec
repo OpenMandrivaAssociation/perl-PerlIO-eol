@@ -12,7 +12,6 @@ Group:		Development/Perl
 Source:         http://search.cpan.org/CPAN/authors/id/A/AU/AUTRIJUS/%{real_name}-%{version}.tar.bz2
 URL:		http://search.cpan.org/dist/%{real_name}/
 BuildRequires:  perl-devel
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 This perl module enable you to normalize line endings
