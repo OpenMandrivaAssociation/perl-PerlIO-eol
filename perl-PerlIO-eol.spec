@@ -1,7 +1,7 @@
 %define name perl-PerlIO-eol
 %define real_name PerlIO-eol
 %define version 0.14
-%define rel     1
+%define rel     2
 
 Summary:	PerlIO layer for normalizing line endings
 Name:		%{name}
