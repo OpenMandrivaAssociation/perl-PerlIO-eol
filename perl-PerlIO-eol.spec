@@ -1,18 +1,18 @@
-%define name perl-PerlIO-eol
-%define real_name PerlIO-eol
-%define version 0.14
-%define rel     2
+%define upstream_name    PerlIO-eol
+%define upstream_version 0.14
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	PerlIO layer for normalizing line endings
-Name:		%{name}
-Version:	%{version}
-Release:	%mkrel %{rel}
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source:         http://search.cpan.org/CPAN/authors/id/A/AU/AUTRIJUS/%{real_name}-%{version}.tar.bz2
-URL:		http://search.cpan.org/dist/%{real_name}/
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:    http://search.cpan.org/CPAN/authors/id/A/AU/AUTRIJUS/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:  perl-devel
-BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This perl module enable you to normalize line endings
@@ -21,7 +21,7 @@ ending.
 It works for both input and output handles.
 
 %prep
-%setup -q -n %{real_name}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 
 %build
@@ -43,6 +43,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/*/*
 %{perl_vendorarch}/PerlIO
 %{perl_vendorarch}/auto/PerlIO
-
-
-
