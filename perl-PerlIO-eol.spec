@@ -1,15 +1,15 @@
 %define upstream_name    PerlIO-eol
-%define upstream_version 0.14
+%define upstream_version 0.19
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	5
+Version:    %{upstream_version}
+Release:	1
 
 Summary:	PerlIO layer for normalizing line endings
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:    http://search.cpan.org/CPAN/authors/id/A/AU/AUTRIJUS/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://github.com/shlomif/PerlIO-eol
+Source0:    https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/PerlIO-eol-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:  perl-devel
