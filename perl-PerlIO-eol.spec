@@ -1,15 +1,13 @@
 %define upstream_name    PerlIO-eol
-%define upstream_version 0.19
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	1
+Version:    0.19
+Release:	2
 
 Summary:	PerlIO layer for normalizing line endings
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/shlomif/PerlIO-eol
-Source0:    https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/PerlIO-eol-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/PerlIO-eol-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:  perl-devel
@@ -22,7 +20,7 @@ ending.
 It works for both input and output handles.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 
 %build
@@ -57,9 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.140.0-1mdv2010.0
 + Revision: 406178
-- rebuild using %%perl_convert_version
-
-* Tue Jan 15 2008 Thierry Vignaud <tv@mandriva.org> 0.14-2mdv2008.1
+- rebuild using %0.19 Tue Jan 15 2008 Thierry Vignaud <tv@mandriva.org> 0.14-2mdv2008.1
 + Revision: 152171
 - rebuild for new perl
 - kill re-definition of %%buildroot on Pixel's request
